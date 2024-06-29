@@ -15,35 +15,41 @@ execution_times = []
 
 # ファイル名のリスト
 file_names = [
-    'C:/Users/12578/Downloads/crop_box_filter系/node_execution_time_20240616/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_2_execution_time_20240616/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_4_execution_time_20240616/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_8_execution_time_20240616/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_14_6_10_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_15_6_11_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_16_6_12_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_16_execution_time_20240616/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_17_5_17_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_18_6_18_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_19_7_19_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_20_9_20_execution_time_20240617/crop_box_filter_measurement_range/node_processing_time.txt', 
-    'C:/Users/12578/Downloads/crop_box_filter系/crop_32_execution_time_20240616/crop_box_filter_measurement_range/node_processing_time.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time1.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time2.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time3.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time4.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time5.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time6.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time7.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time8.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time9.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time10.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time11.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time12.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time13.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time14.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time15.txt', 
+    'C:/Users/carlo/Downloads/crop_box_filter_self/node_processing_time16.txt', 
 ]
 
 x_label = [
     '1',
     '2',
+    '3',
     '4',
+    '5',
+    '6',
+    '7',
     '8',
+    '9',
     '10',
     '11',
     '12',
-    '16',
-    '17',
-    '18',
-    '19',
-    '20',
-    '32'
+    '13',
+    '14',
+    '15',
+    '16'
 ]
 
 # 各ファイルを読み込んでデータを抽出
@@ -65,12 +71,14 @@ plt.boxplot(execution_times,
             whiskerprops=dict(linewidth=2),  # ヒゲの線幅を設定
             capprops=dict(linewidth=2),  # ヒゲの端線の線幅を設定
             medianprops=dict(color='red', linewidth=2))  # 中央値線の設定
+
 plt.xticks(fontsize=20)  # 设置x轴刻度的字体大小
-# plt.xlabel('cores', fontsize=20)
-plt.ylabel('execution time (ms)', fontsize=20)  # 设置y轴的标签
+plt.yticks(fontsize=20)  # 设置y轴刻度的字体大小
+plt.xlabel('cores', fontsize=28)
+plt.ylabel('execution time (ms)', fontsize=28)  # 设置y轴的标签
 plt.grid(True)  # 显示网格
 plt.ylim(bottom=0)
 plt.tight_layout()
 
-plt.savefig('C:/Users/12578/Downloads/crop_box_filter_measurement_range_execution_time.pdf', bbox_inches='tight')
+plt.savefig('C:/Users/carlo/Downloads/crop_box_filter_self_execution_time.pdf', bbox_inches='tight')
 plt.show() 
